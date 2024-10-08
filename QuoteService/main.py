@@ -4,7 +4,7 @@ from pymongo import MongoClient
 import redis
 
 def get_db():
-    client = MongoClient(host='db',
+    client = MongoClient(host='localhost',
                          port=27017,
                          username='root',
                          password='pass',
@@ -13,7 +13,7 @@ def get_db():
     return db
 
 def get_redis():
-    r = redis.Redis(host='redis',
+    r = redis.Redis(host='localhost',
                     port=6379)
     return r
 
